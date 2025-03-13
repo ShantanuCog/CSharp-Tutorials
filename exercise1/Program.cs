@@ -6,10 +6,9 @@ Caveat: We cannot put calculateAvgGrade() in student class (Must follow SRP)
 
 // namespace: defining the context, container for classes
 namespace school {
-
     // Classes: Students, Grades, Teachers, Classes
-  
     // obtain and set properties of the students
+
   class Student {
     private string firstName;    // private field (inaccesible)
     public string FirstName {    // property (pathway to accessibility)
@@ -18,15 +17,15 @@ namespace school {
     }
     public string lastName;
     public int age;
-    // Add grades to student
+    // Add grades property to student class
     public Grades grades;
 
     // constructor to initialise the student with grades and age
-    public Student(string firstName, string lastName, int age, Grades grades) {
-      this.firstName = firstName;
-      this.lastName = lastName;
-      this.age = age;
-      this.grades = grades;
+    public Student(string inputFirstName, string inputLastName, int inputAge, double mathsGrade, double englishGrade) {
+      firstName = inputFirstName;
+      lastName = inputLastName;
+      age = inputAge;
+      grades = new Grades(mathsGrade, englishGrade);
     }
 
     // Methods: Introduce() -> "Hello, my name is 'firstName, 'lastName'"
@@ -50,31 +49,47 @@ namespace school {
       set { englishGrade = value; } // set the englishGrade to 'value'
     }
 
+    // obtain average grades of students
+    private double avgGrade;
+    public double AvgGrade {
+      get { return avgGrade; }  // get the avgGrade
+    }
+
     // constructor
     public Grades(double inputMathsGrade, double inputEnglishGrade) {
       mathsGrade = inputMathsGrade;
       englishGrade = inputEnglishGrade;
+      avgGrade = calculateAvgGrade();
     }
     
     // Methods: calculateAvgGrade() -> return average of english & maths grade
-    public calculateAvgGrade() {
-      int avgGrade = (mathsGrade + englishGrade) / 2;
-      return avgGrade;
+    public double calculateAvgGrade() {
+      return (mathsGrade + englishGrade) / 2;
+      // return avgGrade;
     }
   }
 
-  Grades grades1 = new Grades(45.5, 67);
+  // Grades grades1 = new Grades(45.5, 67);
+  // Student student1 = new Student(); // instantiate an object
+  // instantiate a student with grades
+  // Student student1 = new Student("John", "Doe", 18, new Grades(45.5, 67));
   
-  Student student1 = new Student(); // instantiate an object
-  
-  student1.FirstName = "John"; // set student1's firstName to "John"
-  student1.LastName = "Doe";   // set student1's lastName to "Doe"
-  student1.Age = 18;           // set student1's age to 18
-
 //   Console.log(Student1.FirstName);
 // display the average grade of student1
-  Console.log(student1.grades.calculateAvgGrade());
-  
+}
+
+// namespace: defining the context, container for classes
+public class Program {
+  public static void Main() {
+    // instantiate a student with grades
+    school.Grades grades1 = new school.Grades(45.5, 67);
+    school.Student student1 = new school.Student("John", "Doe", 18, 45.5, 67);
+    // display the name and average grade of student1
+    Console.WriteLine("First Name: " + student1.FirstName);
+    Console.WriteLine("Last Name: " + student1.lastName);
+    Console.WriteLine("Age: " + student1.age);
+    Console.WriteLine("Average Grade: " + student1.grades.AvgGrade);
+  }
 }
 
 class StudentModel {
@@ -85,4 +100,3 @@ class GradeModel {
     // We would like to associate the student with the grade
     // columns: Grade ID, Maths, English + Student ID
 }
-

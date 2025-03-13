@@ -56,10 +56,11 @@ class Program
     static double CalculateAverage(List<int> scores)
     {
         // Implement calculation here
-         int sum = 0;
-        foreach (int score in scores) {
+        int sum = 0;
+        foreach (int score in scores)
+        {
             sum += score;
-            }
+        }
         return (double)sum / scores.Count;
     }
 

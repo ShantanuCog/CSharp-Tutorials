@@ -1,9 +1,9 @@
 ﻿// namespace: defining the context, container for classes
 namespace school {
 
-  // Classes: Students, Grades, Teachers, Classes
+    // Classes: Students, Grades, Teachers, Classes
   
-  // obtain and set properties of the students
+    // obtain and set properties of the students
   class Student {
     private string firstName     // private field (inaccesible)
     public string FirstName {    // property (pathway to accessibility)
@@ -19,7 +19,7 @@ namespace school {
 
   // obtain and grades of students
   class Grades {
-
+    
     // obtain and set maths grades of students
     private double mathsGrade
     public double MathsGrade {
@@ -45,14 +45,13 @@ namespace school {
       int avgGrade = (mathsGrade+englishGrade)/2;
       return avgGrade;
     }
-    
   }
 
-  /*
-  Functional Spec: Student will take in the Grade arguments of english and maths grade
-  Student will be able to calculate their avg grade from their given maths/english grades
-  Caveat: We cannot put calculateAvgGrade() in student class (Must follow SRP)
-  */
+    /*
+    Functional Spec: Student will take in the Grade arguments of english and maths grade
+    Student will be able to calculate their avg grade from their given maths/english grades
+    Caveat: We cannot put calculateAvgGrade() in student class (Must follow SRP)
+    */
 
   Grades grades1 = new Grades(45.5, 67);
   
@@ -65,10 +64,11 @@ namespace school {
 }
 
 class StudentModel {
-  // columns: ID, First Name, Last Name, Age
+  // columns: Student ID, First Name, Last Name, Age
 }
 
 class GradeModel {
-  // columns: ID, Maths, English
+    // We would like to associate the student with the grade
+    // columns: Grade ID, Maths, English + Student ID
 }
 

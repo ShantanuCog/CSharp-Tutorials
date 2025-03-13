@@ -34,32 +34,33 @@ class Program
             grades.Add(letterGrade);
 
             // TODO: Print student details clearly to the console (name, scores, average, letter grade)
-            console.WriteLine($"Student: {studentName}");
-            console.WriteLine($"Scores: {string.Join(", ", scores)}");
-            console.WriteLine($"Average: {average}");
-            console.WriteLine($"Grade: {letterGrade}\n");
+            Console.WriteLine($"Student: {studentName}");
+            Console.WriteLine($"Scores: {string.Join(", ", scores)}");
+            Console.WriteLine($"Average: {average}");
+            Console.WriteLine($"Grade: {letterGrade}\n");
         }
 
         // TODO: Compute and print class statistics:
         // - Compute the class's average
         double classAverage = CalculateAverage(averages);
-        console.WriteLine($"Class Average: {classAverage}");
+        Console.WriteLine($"Class Average: {classAverage}");
         // - Highest scoring student
         int highestScore = GetHighestScore(studentScores);
-        console.WriteLine($"Highest Scoring Student: {studentNames[highestScore]}");
+        Console.WriteLine($"Highest Scoring Student: {studentNames[highestScore]}");
         // - Lowest scoring student
         int lowestScore = GetLowestScore(studentScores);
-        console.WriteLine($"Lowest Scoring Student: {studentNames[lowestScore]}");
+        Console.WriteLine($"Lowest Scoring Student: {studentNames[lowestScore]}");
     }
 
     // TODO: Method to calculate the average score from a list of integers
     static double CalculateAverage(List<int> scores)
     {
         // Implement calculation here
-         int sum = 0;
-        foreach (int score in scores) {
+        int sum = 0;
+        foreach (int score in scores)
+        {
             sum += score;
-            }
+        }
         return (double)sum / scores.Count;
     }
 

@@ -1,0 +1,15 @@
+C:\Users\2391443\Documents\CSharp-Tutorials\exercise2\bin\Debug\net9.0\exercise2.exe
+C:\Users\2391443\Documents\CSharp-Tutorials\exercise2\bin\Debug\net9.0\exercise2.deps.json
+C:\Users\2391443\Documents\CSharp-Tutorials\exercise2\bin\Debug\net9.0\exercise2.runtimeconfig.json
+C:\Users\2391443\Documents\CSharp-Tutorials\exercise2\bin\Debug\net9.0\exercise2.dll
+C:\Users\2391443\Documents\CSharp-Tutorials\exercise2\bin\Debug\net9.0\exercise2.pdb
+C:\Users\2391443\Documents\CSharp-Tutorials\exercise2\obj\Debug\net9.0\exercise2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\2391443\Documents\CSharp-Tutorials\exercise2\obj\Debug\net9.0\exercise2.AssemblyInfoInputs.cache
+C:\Users\2391443\Documents\CSharp-Tutorials\exercise2\obj\Debug\net9.0\exercise2.AssemblyInfo.cs
+C:\Users\2391443\Documents\CSharp-Tutorials\exercise2\obj\Debug\net9.0\exercise2.csproj.CoreCompileInputs.cache
+C:\Users\2391443\Documents\CSharp-Tutorials\exercise2\obj\Debug\net9.0\exercise2.sourcelink.json
+C:\Users\2391443\Documents\CSharp-Tutorials\exercise2\obj\Debug\net9.0\exercise2.dll
+C:\Users\2391443\Documents\CSharp-Tutorials\exercise2\obj\Debug\net9.0\refint\exercise2.dll
+C:\Users\2391443\Documents\CSharp-Tutorials\exercise2\obj\Debug\net9.0\exercise2.pdb
+C:\Users\2391443\Documents\CSharp-Tutorials\exercise2\obj\Debug\net9.0\exercise2.genruntimeconfig.cache
+C:\Users\2391443\Documents\CSharp-Tutorials\exercise2\obj\Debug\net9.0\ref\exercise2.dll
